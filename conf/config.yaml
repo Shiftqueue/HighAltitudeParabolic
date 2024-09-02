@@ -1,0 +1,27 @@
+# 用于图像膨胀腐蚀操作的核大小
+kernel_size:
+  width: 4
+  height: 4
+
+background_subtractor:
+  history: 100 # 卡尔曼滤波器背景建模帧数
+  var_threshold: 45 # 背景变化范围
+  detect_shadows: False # 是否检测背景
+  min_detect_object: 5 # 最小探测物体大小
+
+kalman_filter:
+  max_missed_frames: 30 # 追踪器允许的最长目标跟踪丢失帧数
+  max_tracked_frames: 500 # 最长的目标追踪帧数
+  max_filter_count: 10 # 同时追踪的最大数目
+  min_confidence: 0.5 # 可信度
+
+
+image:
+  min_show_num: 10 # 可展示的轨迹最小记录帧数
+  size: 40 # 图片相似度或DIOU计算截取图片大小
+
+save:
+  #  检测结果保存路径,路径从项目根目录开始
+  save_path: './save/'
+
+
