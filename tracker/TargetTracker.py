@@ -50,7 +50,6 @@ class TargetTracker:
         self.appearance_update_frequency = 0  # 目标图像定期更新
         self.object_color = (0, 0, 0)  # 不同的配置颜色以醒目的标识
         self.create_time = datetime.now()  # 记录初次探测时间
-        self.latest_time = None
 
     def update(self, measurement):
         """
